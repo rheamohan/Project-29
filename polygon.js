@@ -1,7 +1,7 @@
 class Polygon{
     constructor(x,y,side,radius){
         var options={
-            isStatic:true
+            isStatic:false
         }
             this.body = Bodies.polygon(x,y,side,radius,options);
             this.side = side;

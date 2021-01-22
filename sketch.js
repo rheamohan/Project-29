@@ -213,6 +213,13 @@ function mouseDragged(){
 
 function mouseReleased(){
     sling.fly();
-    Matter.Body.applyForce(polygon.body,{x:10,y:-10});
+Matter.Body.applyForce(polygon.body,polygon.body.position,{x:5,y:-2});
+    Matter.Body.setStatic(polygon.body,false);
+}
+
+function keyPressed(){
+    if (keyCode===32){
+        sling.attach(polygon.body);
+    }
 }
 
